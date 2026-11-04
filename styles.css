@@ -62,3 +62,38 @@ body:has(#chronicle:target){background:#0D0D0D;color:#F2EFE6}
 
 .chronicle-v2 .chronicle-new{color:#B89A5B}
 .chronicle-v2 .chronicle-inaugural{color:#B89A5B;font:italic 400 19px/1.2 'EB Garamond',Georgia,serif;margin-top:5px}
+/* Envelope and note card */
+.envelope-intro{overflow-y:auto;perspective:1400px;background:radial-gradient(ellipse at 50% 40%,#24211c 0%,#10100f 48%,#080808 100%);padding:32px 20px;display:grid;place-items:center}
+.envelope-scene{position:relative;width:min(100%,620px);min-height:540px;display:grid;place-items:center;isolation:isolate}
+.envelope{position:absolute;width:100%;aspect-ratio:1.55;filter:drop-shadow(0 28px 32px #0009);transition:transform 1s ease,opacity .8s ease}
+.envelope-back,.envelope-front,.envelope-flap{position:absolute;inset:0;background-color:#191918;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' opacity='.14' filter='url(%23n)'/%3E%3C/svg%3E");border:1px solid #ffffff12}
+.envelope-back{border-radius:3px;background-color:#101010}
+.envelope-front{clip-path:polygon(0 0,50% 54%,100% 0,100% 100%,0 100%);background-color:#20201e;z-index:2}
+.envelope-front:after{content:'';position:absolute;inset:0;background:linear-gradient(32deg,transparent 49.8%,#ffffff0b 50%,transparent 50.3%),linear-gradient(-32deg,transparent 49.8%,#0006 50%,transparent 50.3%)}
+.envelope-flap{clip-path:polygon(0 0,100% 0,50% 57%);z-index:3;transform-origin:top;transition:transform .85s ease .2s;backface-visibility:hidden;background-color:#292825}
+.wax-seal{position:absolute;z-index:4;left:50%;top:51%;transform:translate(-50%,-50%) rotate(-5deg);width:clamp(88px,19vw,120px);aspect-ratio:1;border:1px solid #c3a16b;border-radius:46% 51% 45% 50% / 48% 44% 53% 46%;background:radial-gradient(circle at 35% 24%,#b39a69,#7e643e 60%,#503e27);box-shadow:inset 0 0 0 5px #735938,inset 0 0 0 7px #b59a6670,0 8px 16px #0009;display:grid;place-items:center;transition:transform .4s ease,opacity .4s ease;padding:17px}
+.wax-seal img{display:block;width:100%;height:auto;mix-blend-mode:multiply}
+.wax-seal:hover{transform:translate(-50%,-50%) rotate(-5deg) scale(1.045)}
+.wax-seal:focus-visible{outline:2px solid var(--ivory);outline-offset:7px}
+.envelope-hint{position:absolute;top:calc(50% + min(24vw,225px));font-size:10px;letter-spacing:.24em;text-transform:uppercase;color:#afa99d;transition:opacity .3s}
+.invitation-card{position:relative;z-index:5;width:min(100%,470px);padding:48px 26px 40px;background:#eee8da;color:#26251f;box-shadow:0 24px 70px #0008,inset 0 0 0 9px #eee8da,inset 0 0 0 10px #b89a5b66;opacity:0;visibility:hidden;transform:translateY(65px) scale(.9);transition:opacity .8s ease .6s,transform 1s cubic-bezier(.2,.7,.2,1) .5s,visibility 0s .6s;outline:none;text-align:center}
+.card-salutation{font:italic 25px 'EB Garamond',Georgia,serif;margin:0 0 28px}
+.card-message{font:400 23px/1.45 'Cormorant Garamond',Georgia,serif;margin:0 0 32px}
+.invitation-card h1{font:400 clamp(20px,5.4vw,29px)/1.4 Cinzel,Georgia,serif;letter-spacing:.09em;margin:0 0 12px}
+.card-dates{font-size:10px;letter-spacing:.12em;text-transform:uppercase;margin:0}
+.card-lore{font:italic 23px 'EB Garamond',Georgia,serif;margin:32px 0}
+.card-explore{display:inline-block;border-bottom:1px solid #9a7a43;padding:10px 0;font-size:10px;letter-spacing:.15em;text-transform:uppercase}
+.card-explore span{margin-left:8px}
+.opened .wax-seal{opacity:0;transform:translate(-50%,-30%) rotate(10deg) scale(.8);pointer-events:none}
+.opened .envelope-flap{transform:rotateX(180deg)}
+.opened .envelope{transform:translateY(85px) scale(.94);opacity:.25;transition-delay:.5s}
+.opened .envelope-hint{opacity:0}
+.opened .invitation-card{opacity:1;visibility:visible;transform:translateY(0) scale(1)}
+.envelope-noscript{position:relative;z-index:6;color:var(--ivory);background:#101010;padding:20px;text-align:center}
+.envelope-noscript a{text-decoration:underline}
+@media(max-width:480px){.envelope-scene{min-height:510px}.invitation-card{padding:40px 22px 34px}.card-message{font-size:22px}.envelope-hint{top:calc(50% + 34vw)}}
+@media(prefers-reduced-motion:reduce){.envelope-intro *{transition-delay:0s!important;transition-duration:0s!important}}
+.wax-seal img{mix-blend-mode:normal;filter:drop-shadow(0 1px 1px #3d2c19);width:100%;height:100%;object-fit:contain}
+body:has(.envelope-intro):not(:has(#invitation:target)):not(:has(#chronicle:target)){overflow:hidden}
+.wax-seal img{transform:scale(1.5)}
+.envelope-scene{width:min(620px,calc(100vw - 40px))}
