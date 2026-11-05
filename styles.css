@@ -97,3 +97,60 @@ body:has(#chronicle:target){background:#0D0D0D;color:#F2EFE6}
 body:has(.envelope-intro):not(:has(#invitation:target)):not(:has(#chronicle:target)){overflow:hidden}
 .wax-seal img{transform:scale(1.5)}
 .envelope-scene{width:min(620px,calc(100vw - 40px))}
+/* On phones, one divider between sections keeps headings uncluttered. */
+@media(max-width:650px){.section-head:after{display:none}}
+
+/* The Back Nine */
+.back-nine-seal{border:0;background:transparent;padding:8px;display:grid;place-items:center;cursor:pointer;flex-shrink:0}
+.back-nine-seal img{width:35px;height:35px;object-fit:contain;opacity:.7;transition:opacity .2s}
+.back-nine-seal:hover img{opacity:1}
+.secret-status{font-size:11px;color:var(--brass)}
+.secret-status:empty{display:none}
+.back-nine-shell{max-width:920px;margin:auto;padding:0 26px}
+.back-nine-hero{padding:80px 0 60px;text-align:center}
+.back-nine-hero img{width:100px;height:100px;object-fit:contain;margin-bottom:25px}
+.back-nine-hero h1{font:400 clamp(38px,8vw,72px)/1.2 Cinzel,Georgia,serif;letter-spacing:.06em;margin:18px 0}
+.back-nine-hero .whisper{color:var(--muted);font-size:25px}
+.back-nine-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-bottom:75px}
+.back-nine-panel{border:1px solid var(--hairline);padding:30px}
+.back-nine-panel h2{font:400 30px 'Cormorant Garamond',Georgia,serif;margin:15px 0}
+.back-nine-panel p{color:#c5bfb3;font-size:14px}
+.back-nine-rounds{padding:0;list-style:none;margin:24px 0 0}
+.back-nine-rounds li{padding:14px 0;border-top:1px solid var(--hairline)}
+.back-nine-rounds strong{display:block;font-weight:400;color:var(--ivory)}
+.back-nine-rounds span{font-size:12px;color:var(--muted)}
+@media(max-width:650px){.back-nine-grid{grid-template-columns:1fr}.back-nine-panel{padding:24px}.back-nine-hero{padding:55px 0 35px}.back-nine-shell{padding:0 21px}}
+
+/* The 19th Hole: a typographic flagstick beside a golf-ball e. */
+.nineteenth-wordmark{white-space:nowrap;font-size:clamp(30px,7vw,62px)!important}
+.hole-flag{display:inline-block;position:relative;width:.26em;color:transparent;margin-left:.025em;margin-right:.04em;vertical-align:baseline}
+.hole-flag:before{content:'';position:absolute;left:45%;top:.09em;bottom:.09em;width:1.5px;background:var(--brass);box-shadow:0 .025em 0 #b89a5b}
+.hole-flag:after{content:'';position:absolute;left:calc(45% + 1px);top:.1em;width:.26em;height:.19em;background:var(--brass);clip-path:polygon(0 0,100% 32%,0 100%)}
+.hole-ball{display:inline-flex;position:relative;align-items:center;justify-content:center;width:.65em;height:.65em;margin-left:.08em;vertical-align:.025em;border-radius:50%;font-size:.8em;line-height:1;letter-spacing:0;text-transform:lowercase;color:#363730;background-color:#e7e4d9;background-image:radial-gradient(circle,#a6a49766 .6px,transparent .9px);background-size:4px 4px;box-shadow:inset -.04em -.06em .08em #99978f,0 .03em .06em #0008}
+@media(max-width:360px){.nineteenth-wordmark{font-size:28px!important;letter-spacing:.02em!important}}
+.hole-flag{background:radial-gradient(ellipse at center,#b89a5b99 0 43%,transparent 48%) center calc(100% - .035em)/.26em .07em no-repeat}
+.hole-ball{width:.8em;height:.8em;vertical-align:-.08em;background-size:5px 5px;background-image:radial-gradient(circle,#a6a49755 .5px,transparent .8px);text-shadow:0 1px #fff8}
+/* A separate, restrained emblem leaves the name readable. */
+.nineteenth-emblem{display:block;width:85px;height:64px;margin:28px auto 8px;color:var(--brass)}
+.back-nine-hero .nineteenth-title{font-size:clamp(30px,7vw,62px);letter-spacing:.04em;margin:14px 0 20px}
+.back-nine-hero .nineteenth-tagline{font:500 10px/1.8 Inter,Arial,sans-serif;letter-spacing:.19em;text-transform:uppercase;color:var(--brass);margin:25px auto 0;max-width:290px}
+
+/* Unofficial clubhouse archive */
+.lore-layout{display:block;margin-bottom:80px}
+.lore-layout .back-nine-rounds{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px}
+.lore-heading{margin-bottom:35px}
+.lore-heading h2{font:400 clamp(34px,6vw,48px)/1.2 'Cormorant Garamond',Georgia,serif;margin:14px 0}
+.lore-heading>.whisper{color:var(--muted);font-size:22px;margin:0}
+.lore-stories{display:grid;grid-template-columns:1fr 1fr;column-gap:45px}
+.lore-story{border-top:1px solid var(--hairline);padding:30px 0 35px}
+.lore-feature{grid-column:1/-1;border-top-color:#b89a5b77;max-width:100%}
+.lore-label{font:500 9px/1.8 Inter,Arial,sans-serif;letter-spacing:.15em;text-transform:uppercase;color:var(--brass)}
+.lore-story h3,.legend-grid h3{font:400 30px/1.2 'Cormorant Garamond',Georgia,serif;margin:13px 0 16px}
+.lore-story p{font-size:14px;line-height:1.85;color:#bcb6aa;max-width:700px;margin:0 0 14px}
+.lore-story .lore-punchline{font:italic 23px/1.4 'EB Garamond',Georgia,serif;color:var(--ivory);margin:18px 0 0}
+.lore-traditions{border-top:1px solid #b89a5b77;margin:38px 0 75px;padding-top:45px}
+.legend-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:30px}
+.legend-number{font:400 15px Cinzel,Georgia,serif;color:var(--brass)}
+.legend-grid h3{font-size:26px}
+.legend-grid p{font-size:13px;line-height:1.8;color:var(--muted)}
+@media(max-width:650px){.lore-layout{margin-bottom:55px}.lore-layout .back-nine-rounds,.lore-stories,.legend-grid{grid-template-columns:1fr}.lore-layout .back-nine-rounds{gap:0}.lore-feature{grid-column:auto}.lore-story{padding:25px 0 30px}.legend-grid{gap:25px}.legend-grid article+article{border-top:1px solid var(--hairline);padding-top:25px}.lore-traditions{margin-top:20px}.lore-heading{margin-bottom:25px}}

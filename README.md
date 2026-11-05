@@ -15,13 +15,13 @@ Private local development copy imported from The_Invitational_Private_Developmen
 
 ## Repository status
 
-Repository: acal24/the-invitational, private (confirmed in GitHub). Main is the working branch. Do not enable GitHub Pages or add automatic deployment workflows.
+Repository: acal24/the-invitational, private (confirmed in GitHub). Main is the working branch. GitHub Pages is the intended host, pending explicit approval to enable publication.
 
 ## Deployment preparation
 
-Static site entry: index.html. Required files: styles.css, main.js, assets/master-logo-f195ab221714.png. No build step required. Google Fonts are loaded externally.
+Static site entry: index.html. Required files: 19th-hole.html, styles.css, main.js, assets/master-logo-f195ab221714.png. No build step required. Google Fonts are loaded externally.
 
-This source has no authentication. Before any online deployment, choose and verify server-side access controls appropriate for the intended private audience. A private repository alone does not protect a hosted website.
+The owner has chosen no password or access gate. Once publishing is approved, the website and Easter egg will be publicly accessible. The repository remains private. The five-tap reveal is a discovery feature, not security.
 
 Do not publish, enable public Pages, configure the domain, or change DNS without explicit user approval. Target domain reserved for eventual approved deployment: theinvitational.vip.
 
@@ -35,3 +35,7 @@ Do not publish, enable public Pages, configure the domain, or change DNS without
 - Saturday Bern’s target: 6 PM, booking pending.
 - Chronicle records and the Master Logo asset remain unchanged.
 - Changes are for local review and private source backup; no deployment or DNS changes authorized.
+
+- The 19th Hole is at 19th-hole.html, revealed by five taps on a footer logo. Includes unassigned pairings, five lore stories and three recurring legends.
+- Rich and Ivan arrive Thursday; the main group is confirmed; Mike joins for golf only; Big Jim may join for Bern’s.
+- Phone section headings use a single section divider.

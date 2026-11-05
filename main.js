@@ -16,3 +16,15 @@
   window.setTimeout(()=>card.focus({preventScroll:true}),reduced?0:1100);
  });
 })();
+
+/* A small Easter egg, not an access control. */
+(()=>{
+ document.querySelectorAll('.back-nine-seal').forEach(seal=>{
+  let taps=0,lastTap=0;
+  seal.addEventListener('click',()=>{
+   const now=Date.now();if(now-lastTap>4000)taps=0;lastTap=now;taps++;
+   if(taps>=5){location.href='19th-hole.html';return;}
+   if(taps>=3)seal.nextElementSibling.textContent=taps===3?'A little further…':'One more.';
+  });
+ });
+})();
