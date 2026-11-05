@@ -154,3 +154,12 @@ body:has(.envelope-intro):not(:has(#invitation:target)):not(:has(#chronicle:targ
 .legend-grid h3{font-size:26px}
 .legend-grid p{font-size:13px;line-height:1.8;color:var(--muted)}
 @media(max-width:650px){.lore-layout{margin-bottom:55px}.lore-layout .back-nine-rounds,.lore-stories,.legend-grid{grid-template-columns:1fr}.lore-layout .back-nine-rounds{gap:0}.lore-feature{grid-column:auto}.lore-story{padding:25px 0 30px}.legend-grid{gap:25px}.legend-grid article+article{border-top:1px solid var(--hairline);padding-top:25px}.lore-traditions{margin-top:20px}.lore-heading{margin-bottom:25px}}
+
+/* Daily groups, keeping the two-person pairings together. */
+.pairing-rounds{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:28px;margin-top:30px}
+.pairing-round h3{font:400 29px 'Cormorant Garamond',Georgia,serif;margin:0 0 4px}
+.pairing-round .pairing-course{font-size:11px;color:var(--muted);margin:0 0 24px}
+.pairing-group{border-top:1px solid var(--hairline);padding:18px 0 5px}
+.pairing-group h4{font:500 10px Inter,Arial,sans-serif;letter-spacing:.16em;text-transform:uppercase;color:var(--brass);margin:0 0 12px}
+.pairing-group p{font-size:15px;color:var(--ivory);line-height:1.9;margin:0 0 15px}
+@media(max-width:650px){.pairing-rounds{grid-template-columns:1fr;gap:30px}.pairing-round+.pairing-round{border-top:1px solid #b89a5b66;padding-top:25px}.pairing-round .pairing-course{margin-bottom:20px}}
