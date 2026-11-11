@@ -166,3 +166,10 @@ body:has(.envelope-intro):not(:has(#invitation:target)):not(:has(#chronicle:targ
 
 .booking-note{margin:25px 0 0;padding:18px 0 0;border-top:1px solid var(--hairline);font-size:12px;line-height:1.8;color:#b8b1a6;max-width:700px}
 .booking-note .kicker{display:block;margin-bottom:7px;font-size:9px}
+
+/* The Cup: a permanent entrance to the separate competition app. */
+.nav a{display:inline-flex;align-items:center;min-height:44px;white-space:nowrap}.nav .cup-nav-link{gap:5px}.nav .cup-nav-link:hover,.nav .cup-nav-link:focus-visible,.chronicle-v2 .nav .cup-nav-link:hover,.chronicle-v2 .nav .cup-nav-link:focus-visible{color:var(--brass)!important;opacity:1}
+.cup-entry{display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:center;gap:26px;margin:38px 0 0;padding:30px 32px;border:1px solid #b89a5b70;background:linear-gradient(120deg,#b89a5b0b,transparent 75%)}
+.cup-entry-copy{min-width:0}.cup-entry .kicker{font-size:10px;letter-spacing:.16em;margin:0 0 12px}.cup-entry h2{font:400 clamp(28px,3.2vw,37px)/1.2 'Cormorant Garamond',Georgia,serif;color:var(--ivory);margin:0 0 12px}.cup-entry-copy>p:last-child{font-size:13px;line-height:1.7;color:#c5bfb3;margin:0;max-width:470px}
+.cup-entry-button{display:inline-flex;align-items:center;justify-content:center;gap:22px;min-height:48px;padding:13px 20px;border:1px solid var(--brass);color:var(--brass);font-size:11px;font-weight:500;letter-spacing:.12em;white-space:nowrap}.cup-entry-button span{font-size:20px;line-height:1}.cup-entry-button:hover{background:var(--brass);color:var(--onyx)}
+@media(max-width:650px){.topbar{gap:10px}.nav{gap:12px;font-size:10px;letter-spacing:.07em}.cup-entry{grid-template-columns:1fr;gap:22px;padding:26px 22px;margin-top:28px}.cup-entry .kicker{font-size:10px;letter-spacing:.1em}.cup-entry h2{font-size:34px;max-width:310px}.cup-entry-button{width:100%;justify-content:space-between}.cup-entry-copy>p:last-child{font-size:14px}}

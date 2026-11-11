@@ -39,3 +39,7 @@ Do not publish, enable public Pages, configure the domain, or change DNS without
 - The 19th Hole is at 19th-hole.html, revealed by five taps on a footer logo. Includes unassigned pairings, five lore stories and three recurring legends.
 - Rich and Ivan arrive Thursday; the main group is confirmed; Mike joins for golf only; Big Jim may join for Bern’s.
 - Phone section headings use a single section divider.
+
+## The Cup entrance — November 11, 2026
+
+User authorized publishing the navigation link and clubhouse panel to the existing public Invitational site. Added The Cup to both Weekend and Chronicle navigation, plus an on-brand panel directly below the main invitation hero. All three links open https://cup.theinvitational.vip in the same tab; competition sign-in remains required. Updated the obsolete no-competition sentence to team match play. Browser checked 320px and 1440px layouts without horizontal overflow, 44px navigation / 48px panel targets, Chronicle navigation, and the actual Cloudflare Access destination. No domain, DNS, hosting or competition-data changes.
